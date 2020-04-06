@@ -1,0 +1,59 @@
+SESSION 1
+
+>What is Shell?
+Shell provides you with an interface to the unix system
+It's a program that executes other programs
+It is a layer of programming that understands and executes the commands entered by the user
+Shell scripts are interpreted and not complied
+
+
+>Why is it used?
+Shell scripts allow us to run the commands in chain and have the system execute them as scripted events
+
+#I'm using Windows to learn about this programming method
+
+
+Types of shell
+>bash - Bourne again shell
+is a Unix shell and command language which can run Shell Script files
+ 
+#Learning PowerShell
+Start-Transcript - everything we type in shows up in the transcript file. everything you do on console
+is recorded
+
+everything is verb-noun 
+E.g. Get-Command
+Get-Command -noun service --> displays all the command which has service in it
+there are specific verbs, you can just make up any verb
+
+get-help get-service -online 
+--> look up for help online
+
+cls - clear screen
+get-alias cls
+--> to understand what cls is
+
+to know the status of a process
+get-process -name microsoftedge 
+
+pipe--> |
+take the output ofmicrosoft and send it to other object (get-member)
+get-process -name microsoftedge | get-member
+get-process -name microsoftedge | select-object *  
+
+VARIABLES
+preceeded with $
+
+PS C:\> $zebra = Get-Process MicrosoftEdge
+PS C:\> $zebra
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+869      46    22752      48476       0.75  48412   1 MicrosoftEdge  
+
+PS C:\> $zebra.name
+MicrosoftEdge
+PS C:\> $zebra.kill()     
+
+get-history
+-->displays a list of commands executed
+
